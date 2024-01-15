@@ -1,0 +1,15 @@
+#root {
+  padding: 0em;
+  margin: 0em;
+}
+#home{
+    background-image:url('./assets/img/desktopView.jpg');
+    background-size: cover;
+}
+@media screen and (max-width: 800px) {
+  #home{
+    background-image:url('./assets/logo/3.png');
+    background-size:cover;
+  }
+  
+}
