@@ -5,7 +5,7 @@ import AuthDetail from "./AuthDetail.jsx";
 // import {Outlet, Link, BrowserRouter } from "react-router-dom";
 function Navbar() {
   return (
-    <div className="navbar bg-base-content">
+    <div className="navbar bg-base-200">
       <div className="flex-1">
         <img src={logo} alt="" width="40" />
       </div>

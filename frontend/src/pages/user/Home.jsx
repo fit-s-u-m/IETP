@@ -145,7 +145,7 @@ export default function Home() {
               can afford it to sell to the public
               As our country is moving towards sustainable energy, we need to support that,help contribute to that by adding electric car charger.
             </div>
-              Helping people to adapt using eletric cars.
+            Helping people to adapt using eletric cars.
           </div>
         </div>
       </div>
