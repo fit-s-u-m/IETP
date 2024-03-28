@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import timeout from "connect-timeout"
 import {
   getCarId,
   createTransactionDB,
@@ -24,6 +25,9 @@ app.use(
 );
 app.use(express.json());
 
+console.log(timeout)
+app.use(timeout('600s'));
+
 app.get("/history", async (req, res) => {
   const payments = await getAllTransactions();
   let data = [["transaction data", "payment"]];
@@ -37,11 +41,6 @@ app.post("/transaction", async (req, res) => {
   const payments = await createTransactionDB(data);
   return res.json(await payments);
 });
-// app.get("/history/:id",async (req,res)=>{
-//   const id = req.params.id
-//   const payment = await getPayment(id)
-//   return res.json(payment)
-// })
 
 app.post("/getData", async (req, res) => {
   const email = req.body.email;
@@ -163,6 +162,10 @@ app.post("/getUserCar", async (req, res) => {
   }
   else {res.json({})}
 });
+app.post ("/arduino",async (req,res)=>{
+  res.send(req.body)
+  console.log(req.body)
+})
 
 //chapa
 app.post("/pay", async (req, res) => {
@@ -215,3 +218,4 @@ app.get("/", (re, res) => {
 app.listen(3001, () => {
   console.log("server is running");
 });
+

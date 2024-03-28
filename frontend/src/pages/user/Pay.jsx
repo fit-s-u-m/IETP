@@ -93,7 +93,7 @@ export default function Pay() {
 
           <div className="card w-96 bg-green-800 shadow-xl">
             <figure>
-              <img src={img3} alt="Shoes" />
+              <img src={img3} alt="payment plan" height="200px" />
             </figure>
             <div className="card-body">
               <h2 className="card-title">{` mile driven in avarage is ${mileDriven(
@@ -162,7 +162,7 @@ function item(img, energy, handleSubmit,color) {
   return (
     <div className={classname}>
       <figure>
-        <img src={img} alt="payment plan"/>
+        <img src={img} alt="payment plan" height="200px"/>
       </figure>
       <div className="card-body ">
         <h2 className="card-title">{` mile driven in avarage is ${mileDriven(
