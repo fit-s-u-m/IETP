@@ -38,6 +38,6 @@ then
 
 When people what to pay for electric car carging stations 
 The bill is prepaid 
-![Home page image](https://github.com/fit-s-u-m/IETP/blob/main//payment.png?raw=true)
+![Home page image](https://github.com/fit-s-u-m/IETP/blob/main/imgs/payment.png?raw=true)
 
 # This is just from the user side
