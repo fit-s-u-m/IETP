@@ -27,24 +27,25 @@ export default function GetUrCar() {
 
   // get userId
   useEffect(() => {
-    try{
-    if (authUser) {
-      setEmail(authUser.toJSON().email);
-      setLoading(true);
-      const getUserId = async () => {
-        const user_id_data = await axios.post(
-          "http://localhost:3001/getData",
-          { email },
-          {
-            headers: { "Content-Type": "application/json" },
-          },
-        );
-        setLoading(false);
-        setUserId(user_id_data.data.id);
-      };
-      getUserId();
+    try {
+      if (authUser) {
+        setEmail(authUser.toJSON().email);
+        setLoading(true);
+        const getUserId = async () => {
+          const user_id_data = await axios.post(
+            "http://localhost:3001/getData",
+            { email },
+            {
+              headers: { "Content-Type": "application/json" },
+            },
+          );
+          setLoading(false);
+          setUserId(user_id_data.data.id);
+        };
+        getUserId();
 
-    }}catch(e){
+      }
+    } catch (e) {
       setError(e);
     }
 
