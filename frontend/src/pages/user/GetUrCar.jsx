@@ -105,10 +105,10 @@ export default function GetUrCar() {
           },
         );
         setLoading(false);
-        (resp.data.linkUrl)?
-           (window.location.href = resp.data.linkUrl):(
-             setError(resp.data.detail)
-           )
+        (resp.data.linkUrl) ?
+          (window.location.href = resp.data.linkUrl) : (
+            setError(resp.data.detail)
+          )
       } catch (err) {
         setError(err);
       }
@@ -118,11 +118,11 @@ export default function GetUrCar() {
   return (
     <>
       <Navbar></Navbar>
-      <div className="text-teal-100 font-bold h-screen flex justify-center flex-col gap-10 bg-base-content">
+      <div className="text-teal-100 font-bold h-screen flex justify-center flex-col gap-10 bg-base-100">
         <h2 className="flex justify-center text-4xl">Vehicle Information</h2>
-        {carData?carData.map((car, index) => (
+        {carData ? carData.map((car, index) => (
           <ShowCar key={index} carData={car}></ShowCar>
-        )):null}
+        )) : null}
 
         <div className="flex justify-center items-center gap-5">
           <button className="btn btn-accent" onClick={handleClick}>
@@ -162,70 +162,70 @@ export default function GetUrCar() {
   // <div className="stat-desc text-secondary">↗︎ 40 (2%)</div>
   //<div className="stat-desc">↘︎ 90 (14%)</div>
 }
-        // {carData ? (
-        //   <div className="flex justify-center bg-base-content gap-10 flex-col ">
-        //     <h2 className="flex justify-center text-4xl">
-        //       Vehicle Information
-        //     </h2>
-        //     <div className="flex justify-center bg-base-content gap-10">
-        //       <div>
-        //         {" "}
-        //         <strong>Brand: </strong>
-        //         <p className="badge badge-accent badge-outline p-5 mx-2">
-        //           {carData[0].information.brand}
-        //         </p>{" "}
-        //       </div>
-        //       <div>
-        //         <strong>Model: </strong>
-        //         <p className="badge badge-accent badge-outline p-5 mx-2">
-        //           {" "}
-        //           {carData[0].information.model}
-        //         </p>
-        //       </div>
-        //       <div>
-        //         {" "}
-        //         <strong>VIN: </strong>
-        //         <p className="badge badge-accent badge-outline p-5 mx-2">
-        //           {" "}
-        //           {carData[0].information.vin}
-        //         </p>
-        //       </div>
-        //       <div>
-        //         {" "}
-        //         <strong>Year: </strong>
-        //         <p className="badge badge-accent badge-outline p-5 mx-2">
-        //           {" "}
-        //           {carData[0].information.year}
-        //         </p>
-        //       </div>
-        //     </div>
-        //     <div className="flex justify-center bg-base-content gap-10">
-        //       <div className="stats outline  outline-zinc-700 shadow stats-vertical lg:stats-horizontal">
-        //         <div className="stat place-items-center">
-        //           <div className="stat-title">Battery capacity</div>
-        //           <div className="stat-value">
-        //             {carData[0].chargeState.batteryCapacity}
-        //           </div>
-        //           <div className="stat-desc">
-        //             {" "}
-        //             amount of power a battery can store in mAh
-        //           </div>
-        //         </div>
-        //
-        //         <div className="stat place-items-center">
-        //           <div className="stat-title">Range</div>
-        //           <div className="stat-value text-secondary">
-        //             {carData[0].chargeState.range}
-        //           </div>
-        //         </div>
-        //
-        //         <div className="stat place-items-center">
-        //           <div className="stat-title">max current</div>
-        //           <div className="stat-value">
-        //             {carData[0].chargeState.maxCurrent}
-        //           </div>
-        //         </div>
-        //       </div>
-        //     </div>
-        //   </div>
-        // ) : null}
+// {carData ? (
+//   <div className="flex justify-center bg-base-content gap-10 flex-col ">
+//     <h2 className="flex justify-center text-4xl">
+//       Vehicle Information
+//     </h2>
+//     <div className="flex justify-center bg-base-content gap-10">
+//       <div>
+//         {" "}
+//         <strong>Brand: </strong>
+//         <p className="badge badge-accent badge-outline p-5 mx-2">
+//           {carData[0].information.brand}
+//         </p>{" "}
+//       </div>
+//       <div>
+//         <strong>Model: </strong>
+//         <p className="badge badge-accent badge-outline p-5 mx-2">
+//           {" "}
+//           {carData[0].information.model}
+//         </p>
+//       </div>
+//       <div>
+//         {" "}
+//         <strong>VIN: </strong>
+//         <p className="badge badge-accent badge-outline p-5 mx-2">
+//           {" "}
+//           {carData[0].information.vin}
+//         </p>
+//       </div>
+//       <div>
+//         {" "}
+//         <strong>Year: </strong>
+//         <p className="badge badge-accent badge-outline p-5 mx-2">
+//           {" "}
+//           {carData[0].information.year}
+//         </p>
+//       </div>
+//     </div>
+//     <div className="flex justify-center bg-base-content gap-10">
+//       <div className="stats outline  outline-zinc-700 shadow stats-vertical lg:stats-horizontal">
+//         <div className="stat place-items-center">
+//           <div className="stat-title">Battery capacity</div>
+//           <div className="stat-value">
+//             {carData[0].chargeState.batteryCapacity}
+//           </div>
+//           <div className="stat-desc">
+//             {" "}
+//             amount of power a battery can store in mAh
+//           </div>
+//         </div>
+//
+//         <div className="stat place-items-center">
+//           <div className="stat-title">Range</div>
+//           <div className="stat-value text-secondary">
+//             {carData[0].chargeState.range}
+//           </div>
+//         </div>
+//
+//         <div className="stat place-items-center">
+//           <div className="stat-title">max current</div>
+//           <div className="stat-value">
+//             {carData[0].chargeState.maxCurrent}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// ) : null}
